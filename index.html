@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,65 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>ChatSite</title>
 </head>
+
 <body>
     <header>
-        <div id="logo">ChatSite</div>
-        <div id="barraDePesquisa"></div>
-        <div id="user"></div>
+        <div id="startLogo" class="logo">ChatSite</div>
+        <!--<div id="searchBar"></div>-->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlR3hMw_3daUL3Uhr5Y3uJh_kMaYzyqQhhPA&usqp=CAU" alt="" class="pfp">
     </header>
     <main>
         <nav>
-            <!--<div class="divisao" id="grupos">Grupos</div>-->
-            <div class="divisao" id="amigos" onclick="">
+            <!--<div class="groups" id="grupos">Grupos</div>-->
+            <div class="groups" id="friends" onclick="openFriends()">
                 Amigos
+                <div class="userContainer">
+                </div>
             </div>
-            <div class="divisao" id="mensagensDiretas" onclick="">
-                Mensagens Diretas
+            <div class="groups" id="all" onclick="">
+                <h3>Todos</h3>
+                <ul id="allContainer" class="userContainer">
+                </ul>
             </div>
         </nav>
         <div id="hero">
-            <div id="mensagens"></div>
-            <div id="barraDeDigitacao"></div>
+            <div id="user2InfoBar">
+                <div class="user2InfoBox">
+                    <img src="https://i.pinimg.com/originals/27/6a/fd/276afdc77902ec72741576de598bc342.png" alt="" class="pfp">
+                    <div id="user2Nick" class="user2Nick">Adria</div>
+                </div>
+                <ion-icon name="ellipsis-horizontal" class="icon"></ion-icon>
+            </div>
+            <div id="messages"></div>
+            <input type="text" name="writingBox" id="writingBox">
         </div>
     </main>
+    <div id="startingPage">
+        <div id="startHeader">
+            <div id="startLogo" class="logo">ChatSite</div>
+        </div>
+        <div id="startMain">
+            <div id="login" class="input">
+                <h2>Login</h2>
+                <input type="text" name="loginNick" id="loginNick" placeholder="Login">
+                <input type="password" id="loginPass" name="loginPass" placeholder="Senha">
+                <button id="botaoLogin">Entrar</button>
+            </div>
+            <div class="separator"></div>
+            <div id="registration" class="input">
+                <h2>Cadastre-se</h2>
+                <input type="text" name="registerNick" id="registerNick" placeholder="Insira o Login desejado">
+                <input type="password" name="registerPass2" id="registerPass2" placeholder="Insira sua Senha">
+                <input type="password" name="registerPass2" id="registerPass2" placeholder="Insira sua Senha Novamente">
+                <input type="text" id="registerImage" placeholder="Coloque a URL da imagem deseajada">
+                <button id="registrationButton">Cadastrar</button>
+            </div>
+        </div>
+    </div>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+
 </html>

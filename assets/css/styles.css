@@ -6,6 +6,7 @@
 body {
     height: 100vh;
     width: 100vw;
+    padding: 0px 0px 20px 0px;
     background-color: rgb(10, 10, 10);
 }
 
@@ -18,14 +19,14 @@ header {
     justify-content: space-between;
 }
 
-#logo {
+.logo {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
     font-weight: 700;
     color: rgb(236, 102, 34);
 }
 
-#barraDePesquisa {
+#searchBar {
     height: 50%;
     width: 60vw;
     background-color: rgb(20, 20, 20);
@@ -33,11 +34,42 @@ header {
     border-radius: 6px;
 }
 
-#user {
+#user2InfoBar {
+    height: 60px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(10, 10, 10);
+    border-bottom: 1px solid rgb(236, 102, 34, 0.5);
+    border-radius: 6px 6px 0px 0px;
+}
+
+.user2InfoBox {
+    display: flex;
+    align-items: center;
+}
+
+.pfp {
     height: 40px;
     width: 40px;
     border: 1px solid rgb(236, 102, 34, 0.5);
     border-radius: 40px;
+    object-fit: cover;
+}
+
+#user2Nick {
+    margin-left: 10px;
+    font-family: inherit;
+    font-size: medium;
+    font-weight: 400;
+    color: rgb(236, 102, 34);
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    color: rgb(236, 102, 34);
 }
 
 main {
@@ -59,16 +91,34 @@ nav {
     align-items: center;
 }
 
-.divisao {
+.groups {
     width: 90%;
-    height: 10%;
+    min-height: 60px;
+    max-height: 70%;
     margin: 10px 0px;
-    padding: 0px 10px;
+    padding: 10px 10px;
     background-color: rgb(10, 10, 10);
     border-radius: 10px;
     color: rgb(236, 102, 34);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.userContainer {
+    margin: 10px 0px 0px 0px;
+}
+
+li {
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    display: flex;
     align-items: center;
+}
+
+li img {
+    margin-right: 10px;
 }
 
 #hero {
@@ -78,13 +128,89 @@ nav {
     border-radius: 6px;
 }
 
-#mensagens {
-    height: 85%;
+#messages {
+    height: calc(100% - 70px - 50px);
 }
 
-#barraDeDigitacao {
-    height: 15%;
+#writingBox {
+    height: 60px;
+    margin: 0px;
+    background-color: rgb(10, 10, 10);
+    border: none;
     border-top: 1px solid rgb(236, 102, 34, 0.5);
-    border-radius: 0px;
+    border-radius: 0px 0px 6px 6px;
 }
 
+#startingPage {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#startHeader {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#startLogo {
+    font-size: xx-large;
+}
+
+#startMain {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#login, #registration {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.separator {
+    height: 70%;
+    width: 1px;
+    background-color: rgb(236, 102, 34);
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: 700;
+    color: rgb(236, 102, 34);
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(20, 20, 20);
+    color: rgb(236, 102, 34);
+    border: 1px solid rgb(236, 102, 34, 0.5);
+    border-radius: 6px;
+}
+
+button {
+    height: 40px;
+    width: 60%;
+    background-color: rgb(236, 102, 34);
+    color: rgb(10, 10, 10);
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 6px;
+}
