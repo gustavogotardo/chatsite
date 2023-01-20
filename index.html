@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <header>
+    <header class="hidden">
         <div id="startLogo" class="logo">ChatSite</div>
         <!--<div id="searchBar"></div>-->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlR3hMw_3daUL3Uhr5Y3uJh_kMaYzyqQhhPA&usqp=CAU" alt="" class="pfp">
+        <img src="" alt="" class="pfp">
     </header>
-    <main>
+    <main class="hidden">
         <nav>
             <!--<div class="groups" id="grupos">Grupos</div>-->
             <div class="groups" id="friends" onclick="openFriends()">
@@ -38,11 +38,13 @@
                 </div>
                 <ion-icon name="ellipsis-horizontal" class="icon"></ion-icon>
             </div>
-            <div id="messages"></div>
+            <div id="messages">
+                
+            </div>
             <input type="text" name="writingBox" id="writingBox">
         </div>
     </main>
-    <div id="startingPage">
+    <div class="startingPage">
         <div id="startHeader">
             <div id="startLogo" class="logo">ChatSite</div>
         </div>
@@ -51,16 +53,16 @@
                 <h2>Login</h2>
                 <input type="text" name="loginNick" id="loginNick" placeholder="Login">
                 <input type="password" id="loginPass" name="loginPass" placeholder="Senha">
-                <button id="botaoLogin">Entrar</button>
+                <button id="botaoLogin" onclick="login()">Entrar</button>
             </div>
             <div class="separator"></div>
             <div id="registration" class="input">
                 <h2>Cadastre-se</h2>
                 <input type="text" name="registerNick" id="registerNick" placeholder="Insira o Login desejado">
-                <input type="password" name="registerPass2" id="registerPass2" placeholder="Insira sua Senha">
+                <input type="password" name="registerPass" id="registerPass" placeholder="Insira sua Senha">
                 <input type="password" name="registerPass2" id="registerPass2" placeholder="Insira sua Senha Novamente">
-                <input type="text" id="registerImage" placeholder="Coloque a URL da imagem deseajada">
-                <button id="registrationButton">Cadastrar</button>
+                <input type="text" name="registerImage" id="registerImage" placeholder="Coloque a URL da imagem deseajada">
+                <button id="registrationButton" onclick="logon()">Cadastrar</button>
             </div>
         </div>
     </div>
